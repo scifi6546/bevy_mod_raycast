@@ -11,10 +11,14 @@ categories = ["game-engines", "rendering"]
 
 [dependencies]
 bevy = {  version = "0.5", default-features = false, features = ["render"] }
+winit = "0.24.0"
+
+[build-dependencies]
+embed-resource = "1.4"
 
 [dev-dependencies]
 bevy = { version = "0.5", default-features = false, features = [
-    "render",
+    "render","bevy_wgpu","bevy_winit"
 ] }
 [[bench]]
 name = "ray_mesh_intersection"
